@@ -5,8 +5,8 @@
  * Description: N/A
  * Date: 30/09/2021
  */
-package br.com.alura.schedule.domain;
+package br.com.alura.email.config.security;
 
-public class Contato {
+public class SecurityConfiguration {
     // INCLUDE CODE HERE
 }

@@ -5,8 +5,8 @@
  * Description: N/A
  * Date: 30/09/2021
  */
-package br.com.alura.schedule.config;
+package br.com.alura.email.service;
 
-public class DocumentationConfiguration {
+public class ContatoService {
     // INCLUDE CODE HERE
 }

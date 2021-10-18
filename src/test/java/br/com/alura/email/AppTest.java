@@ -5,8 +5,9 @@
  * Description: N/A
  * Date: 30/09/2021
  */
-package br.com.alura.schedule.repository;
 
-public interface BaseRepository {
+package br.com.alura.email;
+
+public class AppTest {
     // INCLUDE CODE HERE
 }

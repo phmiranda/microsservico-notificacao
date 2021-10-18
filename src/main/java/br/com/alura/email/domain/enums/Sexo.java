@@ -5,8 +5,11 @@
  * Description: N/A
  * Date: 30/09/2021
  */
-package br.com.alura.schedule.controller;
+package br.com.alura.email.domain.enums;
 
-public class ContatoController {
-    // INCLUDE CODE HERE
+public enum Sexo {
+    PADRAO,
+    MASCULINO,
+    FEMININO,
+    OUTRO
 }

@@ -5,8 +5,8 @@
  * Description: N/A
  * Date: 30/09/2021
  */
-package br.com.alura.schedule.service;
+package br.com.alura.email.config.documentation;
 
-public class ContatoService {
+public class SwaggerConfiguration {
     // INCLUDE CODE HERE
 }
