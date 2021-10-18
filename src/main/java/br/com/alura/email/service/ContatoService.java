@@ -7,6 +7,12 @@
  */
 package br.com.alura.email.service;
 
+import javax.ejb.Stateless;
+import java.util.List;
+
+@Stateless
 public class ContatoService {
-    // INCLUDE CODE HERE
+    public List<String> listarEmail() {
+        return List.of("aluno@alura.com.br");
+    }
 }
