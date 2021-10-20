@@ -12,35 +12,25 @@ import br.com.alura.email.domain.Contato;
 import br.com.alura.email.service.ContatoService;
 
 import javax.inject.Inject;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.PrintWriter;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
-@WebServlet("email")
-public class ContatoController extends HttpServlet {
+@Path("contatos")
+public class ContatoController {
 
     @Inject
     private ContatoService contatoService;
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter printWriter = response.getWriter();
-        contatoService.listar().forEach(resultado -> printWriter.print("Os e-mails disponíveis são: " + resultado.getEmail()));
+    @GET
+    @Produces(value = MediaType.APPLICATION_JSON)
+    public Response listar() {
+        return Response.ok(contatoService.listar()).build();
     }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        BufferedReader reader = request.getReader();
-        String[] email = reader.readLine().split(",");
-        Contato contato = new Contato();
-        contato.setEmail(email[0]);
-        contato.setAssunto(email[1]);
-        contato.setMensagem(email[2]);
+    @POST
+    @Consumes(value = MediaType.APPLICATION_JSON)
+    public Response inserir(Contato contato) {
         contatoService.inserir(contato);
+        return Response.status(201).build();
     }
 }
