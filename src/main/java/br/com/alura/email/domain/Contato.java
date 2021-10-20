@@ -5,43 +5,36 @@
  * Description: N/A
  * Date: 30/09/2021
  */
+
 package br.com.alura.email.domain;
 
-import br.com.alura.email.domain.enums.Sexo;
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 
-@Data
+@Getter
+@Setter
+@EqualsAndHashCode
 @Entity(name = "contatos")
 public class Contato {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    public Long id;
-
-    @Column(name = "nome")
-    public String nome;
+    private Long id;
 
     @Column(name = "email")
-    public String email;
+    private String email;
 
-    @Column(name = "documento")
-    public String documento;
+    @Column(name = "assunto")
+    private String assunto;
 
-    @Column(name = "numero_celular")
-    public String numeroCelular;
+    @Column(name = "mensagem")
+    private String mensagem;
 
-    @Column(name = "numero_telefone")
-    public String numeroTelefone;
-
-    @Column(name = "data_de_nascimento")
-    public LocalDate dataDeNascimento;
-
-    @Column(name = "sexo")
-    @Enumerated(EnumType.STRING)
-    public Sexo sexo = Sexo.PADRAO;
+    @Column(name = "agendado")
+    private Boolean agendado;
 }

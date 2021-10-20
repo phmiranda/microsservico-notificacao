@@ -1,0 +1,4 @@
+INSERT INTO contatos(email, assunto, mensagem, agendado) VALUES ('admin@email.com.br', 'ASSUNTO:CURSO SOBRE EJB DA ALURA', 'EXECUTANDO TESTE DE ENVIO DE E-MAIL DO CURSO SOBRE EJBS', FALSE);
+INSERT INTO contatos(email, assunto, mensagem, agendado) VALUES ('analista@email.com.br', 'ASSUNTO:CURSO SOBRE EJB DA ALURA', 'EXECUTANDO TESTE DE ENVIO DE E-MAIL DO CURSO SOBRE EJBS', FALSE);
+INSERT INTO contatos(email, assunto, mensagem, agendado) VALUES ('suporte@email.com.br', 'ASSUNTO:CURSO SOBRE EJB DA ALURA', 'EXECUTANDO TESTE DE ENVIO DE E-MAIL DO CURSO SOBRE EJBS', FALSE);
+INSERT INTO contatos(email, assunto, mensagem, agendado) VALUES ('cliente@email.com.br', 'ASSUNTO:CURSO SOBRE EJB DA ALURA', 'EXECUTANDO TESTE DE ENVIO DE E-MAIL DO CURSO SOBRE EJBS', FALSE);
