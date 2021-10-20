@@ -1,13 +1,17 @@
 /*
  * Author: phmiranda
  * Project: schedule-email
- * Task Number (Nº): SRC-89
- * Description: APRESENTANDO EJB'S E O PROJETO DE AGENDAMENTO DE E-MAIL
+ * Task Number (Nº): SRC-91
+ * Description: FAZENDO REQUISIÇÕES AO NOSSO EJB COM JAX-RS
  * Date: 30/09/2021
  */
 
 package br.com.alura.email.config;
 
-public class ApplicationConfiguration {
-    // INCLUDE CODE HERE
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
+
+@ApplicationPath("/")
+public class ApplicationConfiguration extends Application {
+
 }
