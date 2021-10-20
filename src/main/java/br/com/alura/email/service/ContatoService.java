@@ -8,12 +8,25 @@
 
 package br.com.alura.email.service;
 
+import br.com.alura.email.domain.Contato;
+import br.com.alura.email.repository.ContatoRepository;
+
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import java.util.List;
 
 @Stateless
 public class ContatoService {
-    public List<String> listarEmail() {
-        return List.of("aluno@alura.com.br");
+
+    @Inject
+    private ContatoRepository contatoRepository;
+
+    public List<Contato> listar() {
+        return contatoRepository.index();
+    }
+
+    public void inserir(Contato contato) {
+        contato.setAgendado(false);
+        contatoRepository.inserir(contato);
     }
 }
